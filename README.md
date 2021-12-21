@@ -1,10 +1,15 @@
-# HyperModem
+# Popura HyperModem
 
-Raspberry Pi + OpenWrt + Yggdrasil Network = **EPIC DECENTRALIZED MESH NETWORK**
+<img src="https://raw.githubusercontent.com/popura-network/HyperModem/master/img/hypermodem.jpg">
+
+Turn IoT devices into decentralized network nodes. 
+
+**[Downloads](https://github.com/popura-network/HyperModem/releases)**
 
 ## Features
 
-* Truns your Raspberry Pi to an [Yggdrasil Network](https://yggdrasil-network.github.io) mesh node
+* Customizable firmware based on [OpenWrt](https://openwrt.org)
+* Turns your device to an [Yggdrasil Network](https://yggdrasil-network.github.io) node
 * Supports 802.11s wireless mesh (if there is hardware support)
 * Wireguard and GRE tunneling
 * L2TP/PPPoE/PPTP support
@@ -12,7 +17,9 @@ Raspberry Pi + OpenWrt + Yggdrasil Network = **EPIC DECENTRALIZED MESH NETWORK**
 * IPv6 brokers support
 * Dynamic DNS client
 
-## How to install
+Yggdrasil Network is a peer-to-peer IPv6 network with link-local peer discovery, automatic end-to-end encryption, distributed IP address allocation, and DHT-based routing information exchange.
+
+## How to install on a Raspberry Pi
 
 Flash the downloaded firmware to the SD card (i.e. /dev/mmcblk0 or /dev/sdb):
 
@@ -22,11 +29,11 @@ gunzip -c openwrt-21.02.1-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz | sudo dd of
 
 ## Usage
 
-Connect Raspberry Pi to your home network and find an IP address of a device called `HyperModem` (it connects via DHCP).
+Connect your device to a home network and find an IP address of a device called `HyperModem` (it connects via DHCP).
 
 Login to the web interface (i.e. http://192.168.1.100) and set the root password.
 
-Configure physical links, install extra OpenWrt packages, do whatever you want with your own *HyperModem ™* mesh node.
+Configure physical links, install extra OpenWrt packages, do whatever you want with your own *Popura HyperModem ™* mesh node.
 
 ## How to build
 

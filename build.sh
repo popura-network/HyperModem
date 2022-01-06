@@ -4,6 +4,7 @@ TARGET=${TARGET:-"bcm27xx"}
 SUBTARGET=${SUBTARGET:-"bcm2711"}
 PROFILE=${PROFILE:-"rpi-4"}
 EXTRA_PACKAGES=${EXTRA_PACKAGES}
+FILES=${FILES:-"../files/generic"}
 
 OPENWRT_MIRROR=https://downloads.openwrt.org
 OPENWRT_VERSION="21.02.1"
@@ -27,7 +28,7 @@ if [ ! -d $builder_directory ]; then
 fi
 
 cd $builder_directory
-make image FILES="../files" PROFILE="$PROFILE" PACKAGES="$PACKAGES"
+make image FILES="$FILES" PROFILE="$PROFILE" PACKAGES="$PACKAGES"
 
 echo -e "\n\nSuccess! Your HyperModem firmware:\n"
 ls $PWD/bin/targets/$TARGET/$SUBTARGET/*

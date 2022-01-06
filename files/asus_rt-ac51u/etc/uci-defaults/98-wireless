@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# 2.4G
+uci -q batch << EOF
+set wireless.radio1.disabled='0'
+set wireless.radio1.channel='11'
+set wireless.default_radio1.ssid='OpenWrt'
+set wireless.default_radio1.encryption='psk2'
+set wireless.default_radio1.key='hypermodem'
+set wireless.default_radio1.network='mesh'
+set wireless.mesh=wifi-iface
+set wireless.mesh.device='radio1'
+set wireless.mesh.mode='mesh'
+set wireless.mesh.network='mesh'
+set wireless.mesh.encryption='none'
+set wireless.mesh.mesh_id='meshnet'
+set wireless.mesh.mesh_fwding='0'
+set wireless.mesh.mesh_rssi_threshold='0'
+EOF
+
+# 5G
+uci -q batch << EOF
+set wireless.radio0.disabled='0'
+set wireless.radio0.channel='36'
+set wireless.default_radio0.ssid='OpenWrt'
+set wireless.default_radio0.encryption='psk2'
+set wireless.default_radio0.key='hypermodem'
+set wireless.default_radio0.network='mesh'
+set wireless.mesh5=wifi-iface
+set wireless.mesh5.device='radio0'
+set wireless.mesh5.mode='mesh'
+set wireless.mesh5.network='mesh'
+set wireless.mesh5.encryption='none'
+set wireless.mesh5.mesh_id='meshnet'
+set wireless.mesh5.mesh_fwding='0'
+set wireless.mesh5.mesh_rssi_threshold='0'
+EOF

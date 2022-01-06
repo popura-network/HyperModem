@@ -1,0 +1,6 @@
+#!/bin/sh
+
+uci -q batch << EOF
+set network.lan.proto='dhcp'
+set dhcp.lan.ignore='1'
+EOF

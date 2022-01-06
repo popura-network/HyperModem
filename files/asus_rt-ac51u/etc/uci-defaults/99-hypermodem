@@ -1,0 +1,11 @@
+#!/bin/sh
+
+uci -q batch << EOF
+set system.@system[0].hostname='HyperModem'
+EOF
+
+# Create an isolated network for Yggdrasil peerings only
+uci -q batch << EOF
+set network.mesh=interface
+set network.mesh.proto='none'
+EOF

@@ -13,6 +13,7 @@ DEFAULT_PACKAGES="luci \
 		luci-app-yggdrasil luci-app-ddns \
 		luci-i18n-base-ru luci-theme-openwrt-2020 \
 	usb-modeswitch kmod-usb-wdm kmod-usb-net-cdc-ether umbim kmod-usb-net-cdc-mbim \
+	kmod-mt7601u \
     wpad -wpad-basic-wolfssl \
 	xl2tpd stubby drill getdns"
 PACKAGES="$DEFAULT_PACKAGES $EXTRA_PACKAGES"
